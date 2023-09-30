@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Option", menuName = "Scriptable Object/OptionDate")]
 
-public class SelectData : ScriptableObject
+public class OptionData : ScriptableObject
 {
 
     [Header("# Main Info")]

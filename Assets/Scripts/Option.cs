@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Option : MonoBehaviour
 {
 
-    public SelectData data;
+    public OptionData data;
     Text textEx;
 
     void Awake ()
