@@ -5,6 +5,9 @@ using UnityEngine;
 public class Select : MonoBehaviour
 {
     Option[] options;
+    public int stateStartNum = 0;
+    public int stateEndNum = 0;
+    bool ranEnd = true;
 
     void Awake()
     {
@@ -16,16 +19,14 @@ public class Select : MonoBehaviour
         }
 
         int[] ran = new int[3];
-        while (true)
+        
+        while (ranEnd)
         {
-            ran[0] = Random.Range(0, options.Length);
-            ran[1] = Random.Range(0, options.Length);
-            ran[2] = Random.Range(0, options.Length);
+            ran[0] = Random.Range(stateStartNum, stateEndNum);
+            ran[1] = Random.Range(stateStartNum, stateEndNum);
+            ran[2] = Random.Range(stateStartNum, stateEndNum);
 
-            if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
-            {
-                break;
-            }
+            break;
         }
 
         for (int index = 0; index < ran.Length; index++)
