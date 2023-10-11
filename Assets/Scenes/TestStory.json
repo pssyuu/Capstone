@@ -1,0 +1,23 @@
+{
+    "scenario": [
+      {
+        "id": 0,
+        "text": "새로운 모험을 떠난다 마음이 두근거린다",
+        "nextScenarioID": 1
+      },
+      {
+        "id": 1,
+        "text": "모험을 떠나기전에 직업을 선택해야한다 어떤 직업을 선택할까?",
+        "nextScenarioID": 2
+      },
+      {
+        "id": 2,
+        "text":"",
+        "nextScenarioID": 3
+      },
+      {
+        "id": 3,
+        "text":"직업도 정했으니 여행을 떠나자!!",
+      }
+    ]
+}
