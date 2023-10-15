@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6606143c8185a5c44b9c84065daddb3c, type: 3}
-  m_Name: Option 4
+  m_Name: Option 14
   m_EditorClassIdentifier: 
   optionName: "\uC120\uD0DD\uC9C0 5"
-  optionId: 4
-  optionEx: "\uC0AC\uC81C"
-  nextOptionId: 9
+  optionId: 14
+  optionEx: 10
+  nextOptionId: 10

@@ -17,7 +17,23 @@
       },
       {
         "id": 3,
-        "text":"직업도 정했으니 여행을 떠나자!!",
+        "text": "직업도 정했으니 여행을 떠나자!!",
+        "nextScenarioID": 4
+      },
+      {
+        "id": 4,
+        "text": "여행하던도중 몬스터를 만났다. 어떻게 할까..?",
+        "nextScenarioID": 5
+      },
+      {
+        "id": 5,
+        "text": "",
+        "nextScenarioID": 6
+      },
+      {
+        "id": 6,
+        "text": "으악 죽어버렸다",
+        "nextScenarioID": 999
       }
     ]
 }

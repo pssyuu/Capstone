@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-public class StoryManager : MonoBehaviour
+public class StoryManager : NextScene
 {
     // 분기점
     public TextAsset jsonFile; // 인스펙터 창에서 JSON 파일을 드래그 앤 드롭할 변수
@@ -65,13 +65,23 @@ public class StoryManager : MonoBehaviour
             selectButton.SetActive(false);
             storyButton.gameObject.SetActive(true);
         }
+    }
 
-        /*
-        if (next == 0)
+    private void Option1()
+    {
+        next = storyData.scenario[currentScenarioIndex].nextScenarioID;
+        currentScenarioIndex = next;
+        dialogueText = storyData.scenario[next].text;
+        dialogueTextUI.text = dialogueText;
+
+    }
+
+    private void FixedUpdate()
+    {
+        if (next == 999)
         {
-            DisplayScenario(ranScenarioIndex);
+            LoadScene("Gameover");
         }
-        */
     }
 }
 
