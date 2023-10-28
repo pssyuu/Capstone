@@ -67,15 +67,6 @@ public class StoryManager : NextScene
         }
     }
 
-    private void Option1()
-    {
-        next = storyData.scenario[currentScenarioIndex].nextScenarioID;
-        currentScenarioIndex = next;
-        dialogueText = storyData.scenario[next].text;
-        dialogueTextUI.text = dialogueText;
-
-    }
-
     private void FixedUpdate()
     {
         if (next == 999)

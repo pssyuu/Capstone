@@ -16,7 +16,9 @@ public class ButtonChanger : MonoBehaviour
     Option option1;
     Option option2;
     Option option3;
-    Option option4; 
+    Option option4;
+    [HideInInspector]
+    public int nextoptid = 0;
 
     void Awake()
     {
@@ -39,9 +41,10 @@ public class ButtonChanger : MonoBehaviour
         {
             textEx[i].text = data[i].optionEx;
         }
+
     }
 
-    public void Option1()
+    public void Option1() // 각 버튼 선택지에 맞는 선택지 텍스트를 출력한다
     {
         int i = option0.data.optionId;
         option0.data = data[data[i].nextOptionId];
@@ -64,5 +67,26 @@ public class ButtonChanger : MonoBehaviour
         textEx[4].text = option4.data.optionEx;
 
         btnClick = true;
+    }
+
+    public void btn1click()
+    {
+        nextoptid = option0.data.nextimageId;
+    }
+    public void btn2click()
+    {
+        nextoptid = option1.data.nextimageId;
+    }
+    public void btn3click()
+    {
+        nextoptid = option2.data.nextimageId;
+    }
+    public void btn4click()
+    {
+        nextoptid = option3.data.nextimageId;
+    }
+    public void btn5click()
+    {
+        nextoptid = option4.data.nextimageId;
     }
 }

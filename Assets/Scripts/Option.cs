@@ -6,5 +6,4 @@ using UnityEngine.UI;
 public class Option : MonoBehaviour
 {
     public OptionData data;
-
 }

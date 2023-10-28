@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionName: "\uC120\uD0DD\uC9C0 2"
   optionId: 6
+  nextimageId: 2
   optionEx: "\uC654\uB358\uAE38\uB85C \uB3CC\uC544\uAC04\uB2E4"
   nextOptionId: 11
