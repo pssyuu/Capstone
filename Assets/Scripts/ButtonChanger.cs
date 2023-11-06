@@ -11,14 +11,15 @@ public class ButtonChanger : MonoBehaviour
 
     [HideInInspector]
     public bool btnClick = false;
+    [HideInInspector]
+    public int nextoptid = 0;
 
     Option option0;
     Option option1;
     Option option2;
     Option option3;
     Option option4;
-    [HideInInspector]
-    public int nextoptid = 0;
+
 
     void Awake()
     {

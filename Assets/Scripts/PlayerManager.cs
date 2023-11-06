@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NpcChanger : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     public GameObject btn;
     public Image myImage;
