@@ -1,72 +1,39 @@
-using UnityEngine;
+using System.Collections.Generic;
+using static Scriptable_NPC;
 
-public class NPC : MonoBehaviour
+public class NPC
 {
-    public enum PersonalityType
-    {
-        Aggressive,
-        Friendly,
-        Neutral
-    }
+    public string npcName { get; set; }
+    public int maxHealth { get; set; }
+    public int currentHealth { get; set; }
+    public int temporaryHealth { get; set; }
+    public int experience { get; set; }
+    public int level { get; set; }
+    public RaceType race { get; set; }
+    public int defensive { get; set; }
+    public int speed { get; set; }
 
-    public enum OccupationType
-    {
-        Warrior,
-        Paladin,
-        Barbarian_Warrior,
-        Thief,
-        Hunter,
-        Bard,
-        Wizard,
-        Witch,
-        Priest
-    }
+    public List<string> skills { get; set; }
+    public List<string> spells { get; set; }
+    public List<string> equipment { get; set; }
+    public List<string> consumables { get; set; }
 
-    public enum RaceType
-    {
-        Human,
-        Elf,
-        Dwarf,
-        Orc,
-        Goblin
-    }
+    public int strength { get; set; }
+    public int agility { get; set; }
+    public int healthStat { get; set; }
+    public int intelligence { get; set; }
+    public int wisdom { get; set; }
+    public int charisma { get; set; }
+    public int strengthResist { get; set; }
+    public int agilityResist { get; set; }
+    public int healthStatResist { get; set; }
+    public int intelligenceResist { get; set; }
+    public int wisdomResist { get; set; }
+    public int charismaResist { get; set; }
+    public List<string> skillProficiencies { get; set; }
 
-    public enum ReactionType
-    {
-        Idle,
-        Smile,
-        Sad
-    }
-
-    public string npcName;
-    public int level;
-
-    public int health;
-    public int damage;
-    public int defense;
-
-    public PersonalityType personality;
-    public OccupationType occupation;
-    public RaceType race;
-    public ReactionType reaction;
-
-    public float aggressiveProbability;
-    public float friendlyProbability;
-    public float neutralProbability;
-
-    public NPC(string name, int lvl, int hp, int dmg, int def, PersonalityType per, OccupationType occ, RaceType rac, ReactionType react, float aggrProb, float friendProb, float neutralProb)
+    public NPC(string name)
     {
         npcName = name;
-        level = lvl;
-        health = hp;
-        damage = dmg;
-        defense = def;
-        personality = per;
-        occupation = occ;
-        race = rac;
-        reaction = react;
-        aggressiveProbability = aggrProb;
-        friendlyProbability = friendProb;
-        neutralProbability = neutralProb;
     }
 }
