@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0381ff6ca09b9f4409bc152fe6968827, type: 3}
+  m_Name: New NPC 1
+  m_EditorClassIdentifier: 
+  npcName: 2
+  maxHealth: 2
+  curentHealth: 22
+  temporaryHealth: 2
+  experience: 2
+  level: 2
+  defensive: 22
+  speed: 222
+  skills: []
+  spells: []
+  equipment: []
+  consumables: []
+  strength: 1
+  agility: 222
+  healthStat: 3
+  intelligence: 22
+  wisdom: 2
+  charisma: 6
+  strengthResist: 2
+  agilityResist: 8
+  healthStatResist: 2
+  intelligenceResist: 10
+  wisdomResist: 11
+  charismaResist: 12
+  skillProficiencies: []
+  race: 0

@@ -12,8 +12,27 @@
       },
       {
         "id": 2,
-        "text":"",
-        "nextScenarioID": 3
+        "text": "",
+        "choices": [
+          {
+            "text": "앞으로 계속 나아갑니다.",
+            "nextScenarioID": 1
+          },
+          {
+            "text": "뒤로 돌아갑니다.",
+            "nextScenarioID": 2
+          },
+          {
+            "text": "간니다.",
+            "nextScenarioID": 3
+          },
+          {
+            "text": "모르겠다.",
+            "nextScenarioID": 4
+          },
+          "nextScenarioID",
+          :,
+          3
       },
       {
         "id": 3,

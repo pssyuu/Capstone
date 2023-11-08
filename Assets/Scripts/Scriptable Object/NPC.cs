@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using static Scriptable_NPC;
+using UnityEngine;
 
-public class NPC
+public class NPC : MonoBehaviour
 {
     public string npcName { get; set; }
     public int maxHealth { get; set; }

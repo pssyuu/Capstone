@@ -9,6 +9,7 @@ public class ButtonChanger : MonoBehaviour
     public Text[] textEx;
     public OptionData[] data;
 
+
     [HideInInspector]
     public bool btnClick = false;
     [HideInInspector]
@@ -22,8 +23,7 @@ public class ButtonChanger : MonoBehaviour
 
 
     void Awake()
-    {
-
+    { 
         /*
           for (int i = 0; i < Btn.Length; i++)
           {
@@ -36,6 +36,7 @@ public class ButtonChanger : MonoBehaviour
         option2 = Btn[2].GetComponent<Option>();
         option3 = Btn[3].GetComponent<Option>();
         option4 = Btn[4].GetComponent<Option>(); 
+        
 
         // 처음 버튼에 텍스트를 넣어준다.
         for (int i = 0; i < textEx.Length; i++)
