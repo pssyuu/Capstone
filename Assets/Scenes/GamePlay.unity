@@ -1072,7 +1072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c23dcd3212dd142ace3d4471b3f3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcData: {fileID: 11400000, guid: 289e2940396b3514293bb4561a1974e8, type: 2}
+  npcData: {fileID: 11400000, guid: d220a58a14c87c94aa985661a764a0cd, type: 2}
 --- !u!1 &414262947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,6 +1255,7 @@ GameObject:
   - component: {fileID: 605350437}
   - component: {fileID: 605350436}
   - component: {fileID: 605350435}
+  - component: {fileID: 605350438}
   m_Layer: 5
   m_Name: Player2
   m_TagString: Untagged
@@ -1338,6 +1339,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605350433}
   m_CullTransparentMesh: 1
+--- !u!114 &605350438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605350433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c23dcd3212dd142ace3d4471b3f3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcData: {fileID: 11400000, guid: 5d97a89440815d944a23215b569df1a5, type: 2}
 --- !u!1 &624813208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,7 +2061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 893556863}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 965856435}
+        m_TargetAssemblyTypeName: Chainf, Assembly-CSharp
+        m_MethodName: NextChaInform
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &893556863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2176,7 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c23dcd3212dd142ace3d4471b3f3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcData: {fileID: 11400000, guid: f9cfb0717d1d2c9439b9b8ac89ea92b8, type: 2}
+  npcData: {fileID: 11400000, guid: f65494b70650b9640a662174b6d6910e, type: 2}
 --- !u!1 &929695038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,7 +2235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPC:
-  - {fileID: 1616738846}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 368807666}
@@ -2403,6 +2429,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChaInform: {fileID: 1999980680}
+  npc:
+  - {fileID: 11400000, guid: f9cfb0717d1d2c9439b9b8ac89ea92b8, type: 2}
+  - {fileID: 11400000, guid: 5d97a89440815d944a23215b569df1a5, type: 2}
+  - {fileID: 11400000, guid: f65494b70650b9640a662174b6d6910e, type: 2}
+  - {fileID: 11400000, guid: d220a58a14c87c94aa985661a764a0cd, type: 2}
 --- !u!114 &965856436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2449,7 +2480,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 965856435}
         m_TargetAssemblyTypeName: Chainf, Assembly-CSharp
-        m_MethodName: ChainforOnOff
+        m_MethodName: ChaInformOnOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3581,9 +3612,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1616738841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca0c9870344c6243ae3e33d3ba9caa1, type: 3}
+  m_Script: {fileID: 11500000, guid: a9c23dcd3212dd142ace3d4471b3f3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcData: {fileID: 11400000, guid: f9cfb0717d1d2c9439b9b8ac89ea92b8, type: 2}
 --- !u!1 &1659163420
 GameObject:
   m_ObjectHideFlags: 0
@@ -4649,7 +4681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -10,31 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0381ff6ca09b9f4409bc152fe6968827, type: 3}
-  m_Name: New NPC 1
+  m_Name: New NPC 4
   m_EditorClassIdentifier: 
-  npcName: 1
-  maxHealth: 1
-  curentHealth: 11
-  temporaryHealth: 111
-  experience: 1
-  level: 11
-  defensive: 11
-  speed: 111
+  npcName: 44
+  maxHealth: 4
+  curentHealth: 4
+  temporaryHealth: 444
+  experience: 44
+  level: 4
+  defensive: 224
+  speed: 4
   skills: []
   spells: []
   equipment: []
   consumables: []
-  strength: 1
-  agility: 11
-  healthStat: 11
-  intelligence: 111
-  wisdom: 1
-  charisma: 1
-  strengthResist: 1111
-  agilityResist: 1
-  healthStatResist: 1
-  intelligenceResist: 11
-  wisdomResist: 111
-  charismaResist: 11
+  strength: 44
+  agility: 4
+  healthStat: 44
+  intelligence: 4
+  wisdom: 4
+  charisma: 4
+  strengthResist: 4
+  agilityResist: 4
+  healthStatResist: 4
+  intelligenceResist: 4
+  wisdomResist: 44
+  charismaResist: 44
   skillProficiencies: []
   race: 0
