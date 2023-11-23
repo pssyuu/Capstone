@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+    
 public class GameManager : MonoBehaviour
 {
 
@@ -29,5 +29,10 @@ public class GameManager : MonoBehaviour
 
             }
         }
+    }
+
+    public int RollDice(int sides)
+    {
+        return Random.Range(1, sides + 1);
     }
 }

@@ -20,6 +20,15 @@ public class Scriptable_NPC : ScriptableObject
         Orc,
         Goblin
     }
+    public enum Personalitytype
+    {
+        ACTOR,
+        EXPLORER,
+        AGITATOR,
+        POWERGAMER, 
+        TAcTICIAN,
+        STORYTELLER
+    }
     public int defensive;
     public int speed;
 
