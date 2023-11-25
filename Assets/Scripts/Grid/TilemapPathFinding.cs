@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -12,10 +12,29 @@ public class TilemapPathFinding : MonoBehaviour
     private List<Vector3> path;
     private Vector3Int highlightedCell;
 
+    bool canMove = false;
+
     void Update()
     {
-        HandleMouseClick();
-        MoveOnPath();
+        if (canMove)
+        {
+            HandleMouseClick();
+            MoveOnPath();
+        }
+
+    }
+    public void ToggleMovement()
+    {
+        canMove = !canMove;
+        if (!canMove)
+        {
+            // ì´ë™ ì¤‘ì§€ ì‹œ í˜„ì¬ í•˜ì´ë¼ì´íŠ¸ í•´ì œ
+            if (highlightedCell != null)
+            {
+                tilemap.SetTileFlags(highlightedCell, TileFlags.None);
+                tilemap.SetColor(highlightedCell, originalColor);
+            }
+        }
     }
 
     public void HandleMouseClick()
@@ -33,13 +52,13 @@ public class TilemapPathFinding : MonoBehaviour
                 {
                     if (highlightedCell == targetCell)
                     {
-                        // µÎ ¹øÂ° Å¬¸¯ ½Ã ¿ø·¡ »ö»óÀ¸·Î µÇµ¹¸®°í ÀÌµ¿
+                        // ï¿½ï¿½ ï¿½ï¿½Â° Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
                         HighlightTile(targetCell, originalColor);
                         FindPath(transform.position, tilemap.GetCellCenterWorld(targetCell));
                     }
                     else
                     {
-                        // Ã³À½ Å¬¸¯ ½Ã Å¸ÀÏ »ö»ó º¯°æ
+                        // Ã³ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                         HighlightTile(targetCell, highlightColor);
                     }
                 }
@@ -68,8 +87,13 @@ public class TilemapPathFinding : MonoBehaviour
 
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
-                transform.position = targetPosition; // Áß½É¿¡ Á¤È®È÷ ¸ÂÃß±â
+                transform.position = targetPosition; // ì¤‘ì‹¬ì— ì •í™•íˆ ë§ì¶”ê¸°
                 path.RemoveAt(0);
+
+                if (path.Count == 0)
+                {
+                    canMove = false; // ì´ë™ì´ ëë‚¬ìœ¼ë¯€ë¡œ canMoveë¥¼ falseë¡œ ì„¤ì •
+                }
             }
         }
     }
@@ -79,7 +103,7 @@ public class TilemapPathFinding : MonoBehaviour
         if (highlightedCell != null)
         {
             tilemap.SetTileFlags(highlightedCell, TileFlags.None);
-            tilemap.SetColor(highlightedCell, originalColor); // ¿©±â¸¦ ¼öÁ¤
+            tilemap.SetColor(highlightedCell, originalColor); // ï¿½ï¿½ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½
         }
 
         highlightedCell = cell;

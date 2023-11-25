@@ -49,4 +49,21 @@ public class TestNPC : NPC
         charismaResist = npcData.charismaResist;
         skillProficiencies = npcData.skillProficiencies;
     }
+
+
+    public void StartFilcker()
+    {
+        StartCoroutine(FilckerChractor());
+    }
+
+    public IEnumerator FilckerChractor()
+    {
+        Color originColor = GetComponent<SpriteRenderer>().color;
+
+        GetComponent<SpriteRenderer>().color = Color.red;
+
+        yield return new WaitForSeconds(0.1f);
+
+        GetComponent<SpriteRenderer>().color = originColor;
+    }
 }
