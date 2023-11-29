@@ -158,6 +158,7 @@ MonoBehaviour:
   - {fileID: 1216184635}
   - {fileID: 1909338769}
   - {fileID: 265744575}
+  StoryManager: {fileID: 1996373114}
   textEx:
   - {fileID: 1248538899}
   - {fileID: 205899549}
@@ -177,9 +178,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd37cb12c5f85b24da70d95269a7f450, type: 2}
   - {fileID: 11400000, guid: 31e5458d0b4ee584fb147f02d19b8bb7, type: 2}
   - {fileID: 11400000, guid: 3445f1019245e1a49a348bc87e4306dc, type: 2}
+  - {fileID: 11400000, guid: 9afbb88c521bc7e48bb39e2f50bf53d1, type: 2}
+  - {fileID: 11400000, guid: 3b09743fc52c0a845b166fc6538e2554, type: 2}
+  - {fileID: 11400000, guid: 5098401b18fe63c4eb9067a58f53ff83, type: 2}
   - {fileID: 11400000, guid: 42237fcf97383ec4faffaf2cbd61cb6e, type: 2}
-  - {fileID: 11400000, guid: 3c21ec6f48334134994a6c6e5b4606b3, type: 2}
-  - {fileID: 11400000, guid: 253cb583959ff764596576957326ae45, type: 2}
+  turn: 0
   btnClick: 0
   nextoptid: 0
 --- !u!4 &68806905
@@ -461,7 +464,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 68806904}
         m_TargetAssemblyTypeName: ButtonChanger, Assembly-CSharp
-        m_MethodName: Option1
+        m_MethodName: btn2click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -473,7 +476,19 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 68806904}
         m_TargetAssemblyTypeName: ButtonChanger, Assembly-CSharp
-        m_MethodName: btn2click
+        m_MethodName: Option1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 929695043}
+        m_TargetAssemblyTypeName: FlowBar, Assembly-CSharp
+        m_MethodName: Cilcktr
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -816,7 +831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &265744576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -833,10 +848,10 @@ RectTransform:
   m_Father: {fileID: 1290037998}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 959.92224, y: -425}
+  m_SizeDelta: {x: 900, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265744577
 MonoBehaviour:
@@ -969,6 +984,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265744575}
   m_CullTransparentMesh: 1
+--- !u!1 &300332014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 300332016}
+  - component: {fileID: 300332015}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &300332015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300332014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f1267286a632e42bb1e229a040d506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 68806903}
+  player:
+  - {fileID: 1616738844}
+  - {fileID: 605350436}
+  - {fileID: 928473363}
+  - {fileID: 368807664}
+  smileimg: {fileID: 21300000, guid: 72ab7bdbd831c8a479f7779f3c0cf521, type: 3}
+  sadimg: {fileID: 21300000, guid: c97bbf61f0dc9054dabd5c39866b5a6c, type: 3}
+  baseimg: {fileID: 21300000, guid: 1198b741fed2c664fbdcb8db25a55685, type: 3}
+--- !u!4 &300332016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300332014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 889.44714, y: 574.09045, z: 7.557737}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &368807661
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +1048,6 @@ GameObject:
   - component: {fileID: 368807662}
   - component: {fileID: 368807665}
   - component: {fileID: 368807664}
-  - component: {fileID: 368807666}
   - component: {fileID: 368807667}
   m_Layer: 5
   m_Name: Player4
@@ -1048,18 +1115,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368807661}
   m_CullTransparentMesh: 1
---- !u!114 &368807666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368807661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca0c9870344c6243ae3e33d3ba9caa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &368807667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1291,13 +1346,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605350433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6f1267286a632e42bb1e229a040d506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 68806903}
-  myImage: {fileID: 605350436}
+  player: []
   smileimg: {fileID: 21300000, guid: 72ab7bdbd831c8a479f7779f3c0cf521, type: 3}
   sadimg: {fileID: 21300000, guid: c97bbf61f0dc9054dabd5c39866b5a6c, type: 3}
   baseimg: {fileID: 21300000, guid: 1198b741fed2c664fbdcb8db25a55685, type: 3}
@@ -2213,8 +2268,8 @@ GameObject:
   m_Component:
   - component: {fileID: 929695040}
   - component: {fileID: 929695039}
-  - component: {fileID: 929695041}
   - component: {fileID: 929695042}
+  - component: {fileID: 929695043}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2235,10 +2290,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPC:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 368807666}
+  - {fileID: 1616738846}
+  - {fileID: 605350438}
+  - {fileID: 928473365}
+  - {fileID: 368807667}
 --- !u!4 &929695040
 Transform:
   m_ObjectHideFlags: 0
@@ -2254,24 +2309,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &929695041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929695038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb1c509b7e0c32e4aa4ef1ca90043b2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Flowbar:
-  - {fileID: 1952194473}
-  - {fileID: 2067542880}
-  - {fileID: 427353327}
-  - {fileID: 658490032}
-  Damage: 1
 --- !u!114 &929695042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2284,6 +2321,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a7749458a471c409ead12553141a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &929695043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929695038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1c509b7e0c32e4aa4ef1ca90043b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonChanger: {fileID: 68806903}
+  Flowbar:
+  - {fileID: 1952194473}
+  - {fileID: 2067542880}
+  - {fileID: 427353327}
+  - {fileID: 658490032}
+  Damage: 10
 --- !u!1 &960212783
 GameObject:
   m_ObjectHideFlags: 0
@@ -3013,7 +3069,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 68806904}
         m_TargetAssemblyTypeName: ButtonChanger, Assembly-CSharp
-        m_MethodName: Option1
+        m_MethodName: btn3click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3025,7 +3081,19 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 68806904}
         m_TargetAssemblyTypeName: ButtonChanger, Assembly-CSharp
-        m_MethodName: btn3click
+        m_MethodName: Option1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 929695043}
+        m_TargetAssemblyTypeName: FlowBar, Assembly-CSharp
+        m_MethodName: Cilcktr
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3252,7 +3320,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 900, y: 90}
+  m_CellSize: {x: 1500, y: 90}
   m_Spacing: {x: 0, y: 20}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -3555,13 +3623,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616738841}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6f1267286a632e42bb1e229a040d506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 68806903}
-  myImage: {fileID: 1616738844}
+  player: []
   smileimg: {fileID: 21300000, guid: 72ab7bdbd831c8a479f7779f3c0cf521, type: 3}
   sadimg: {fileID: 21300000, guid: c97bbf61f0dc9054dabd5c39866b5a6c, type: 3}
   baseimg: {fileID: 21300000, guid: 1198b741fed2c664fbdcb8db25a55685, type: 3}
@@ -3972,7 +4040,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 68806904}
         m_TargetAssemblyTypeName: ButtonChanger, Assembly-CSharp
-        m_MethodName: Option1
+        m_MethodName: btn1click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3984,7 +4052,19 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 68806904}
         m_TargetAssemblyTypeName: ButtonChanger, Assembly-CSharp
-        m_MethodName: btn1click
+        m_MethodName: Option1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 929695043}
+        m_TargetAssemblyTypeName: FlowBar, Assembly-CSharp
+        m_MethodName: Cilcktr
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4211,7 +4291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1909338770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4228,10 +4308,10 @@ RectTransform:
   m_Father: {fileID: 1290037998}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 959.92224, y: -425}
+  m_SizeDelta: {x: 900, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909338771
 MonoBehaviour:
@@ -4503,6 +4583,8 @@ MonoBehaviour:
   dialogueTextUI: {fileID: 811227163}
   selectButton: {fileID: 709616288}
   storyButton: {fileID: 709550385}
+  canvas: {fileID: 1061260306}
+  next: 0
 --- !u!114 &1996373118
 MonoBehaviour:
   m_ObjectHideFlags: 0

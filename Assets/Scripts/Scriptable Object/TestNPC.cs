@@ -11,7 +11,7 @@ public class TestNPC : NPC
 
     void Start()
     {
-        InformationPrint();
+        // InformationPrint();
 
     }
 

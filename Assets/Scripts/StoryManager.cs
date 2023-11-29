@@ -10,9 +10,10 @@ public class StoryManager : NextScene
     public Text dialogueTextUI;
     public GameObject selectButton;
     public GameObject storyButton;
+    public GameObject canvas;
 
     private StoryData storyData;
-    private int next = 0;
+    public int next = 0;
     private int currentScenarioIndex = 0;
     //private int ranScenarioIndex = Random.Range(0,2);
 
@@ -20,6 +21,7 @@ public class StoryManager : NextScene
 
     private void Awake()
     {
+        
         // 처음 시작시 선택창 비활성화
         selectButton.SetActive(false);
     }
@@ -50,6 +52,27 @@ public class StoryManager : NextScene
     {
         // 현재 텍스트를 다음 텍스트로 넘어감
         next = storyData.scenario[currentScenarioIndex].nextScenarioID;
+    }
+
+    public void CanvasOn()
+    {
+        canvas.gameObject.SetActive(true);
+    }
+
+    private void FixedUpdate()
+    {
+
+        if (next == 999)
+        {
+            LoadScene("GameClear");
+        }
+        else if (next == 998)
+        {
+            next = 11;
+            canvas.gameObject.SetActive(false);
+            LoadScene2("Battle");
+        }
+
         currentScenarioIndex = next;
         dialogueText = storyData.scenario[next].text;
         dialogueTextUI.text = dialogueText;
@@ -65,14 +88,7 @@ public class StoryManager : NextScene
             selectButton.SetActive(false);
             storyButton.gameObject.SetActive(true);
         }
-    }
-
-    private void FixedUpdate()
-    {
-        if (next == 999)
-        {
-            LoadScene("Gameover");
-        }
+ 
     }
 }
 

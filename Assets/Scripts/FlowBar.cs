@@ -5,16 +5,41 @@ using UnityEngine.UI;
 
 public class FlowBar : MonoBehaviour 
 {
+    public GameObject ButtonChanger;
     public Slider[] Flowbar;
     public float Damage;
+    int nextoptid;
+    bool btnClick = true;
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0))
+        nextoptid = ButtonChanger.GetComponent<ButtonChanger>().nextoptid;
+
+        if (btnClick)
         {
-            Flowbar[0].value -= Damage;
-            Flowbar[2].value -= Damage;
+            switch (nextoptid)
+            {
+                case 3:
+                    Flowbar[1].value += Damage;
+                    Flowbar[2].value -= Damage;
+                    break;
+
+                case 1:
+                    Flowbar[1].value -= Damage;
+                    Flowbar[2].value += Damage;
+                    Flowbar[3].value -= Damage;
+                    break;
+
+                case 2:
+                    Flowbar[0].value += Damage;
+                    Flowbar[2].value -= Damage;
+                    Flowbar[3].value += Damage;
+                    break;
+            }
+            btnClick = false;
         }
+
+   
 
         for (int i = 0; i < 4; i++)
         {
@@ -40,4 +65,10 @@ public class FlowBar : MonoBehaviour
         }
 
     }
+
+    public void Cilcktr()
+    {
+        btnClick = true;
+    }
+
 }

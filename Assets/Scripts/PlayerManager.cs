@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     public GameObject btn;
-    public Image myImage;
+    public Image[] player;
     public Sprite smileimg;
     public Sprite sadimg;
     public Sprite baseimg;
@@ -15,9 +15,8 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-       //nextoptid = btn.GetComponent<ButtonChanger>().nextoptid;
-        myImage = GetComponent<Image>();
-       // myImage.sprite = smileimg;
+        //nextoptid = btn.GetComponent<ButtonChanger>().nextoptid; 
+        // myImage.sprite = smileimg;
     }
 
    void FixedUpdate()
@@ -26,16 +25,32 @@ public class PlayerManager : MonoBehaviour
 
         switch (nextoptid)
         {
-            case 0:
-                myImage.sprite = baseimg;
+            case 3:
+                player[0].sprite = baseimg;
+                player[1].sprite = smileimg;
+                player[2].sprite = sadimg;
+                player[3].sprite = baseimg;
                 break;
 
             case 1:
-                myImage.sprite = smileimg;
+                player[0].sprite = baseimg;
+                player[1].sprite = sadimg;
+                player[2].sprite = smileimg;
+                player[3].sprite = sadimg;
                 break;
 
             case 2:
-                myImage.sprite = sadimg;
+                player[0].sprite = smileimg;
+                player[1].sprite = baseimg;
+                player[2].sprite = sadimg;
+                player[3].sprite = smileimg;
+                break;
+
+            case 0:
+                player[0].sprite = baseimg;
+                player[1].sprite = baseimg;
+                player[2].sprite = baseimg;
+                player[3].sprite = baseimg;
                 break;
 
         }

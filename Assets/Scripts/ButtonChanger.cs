@@ -6,14 +6,15 @@ using UnityEngine.UI;
 public class ButtonChanger : MonoBehaviour
 {
     public GameObject[] Btn;
+    public GameObject StoryManager;
     public Text[] textEx;
     public OptionData[] data;
-
+    public int turn;
 
     [HideInInspector]
     public bool btnClick = false;
     [HideInInspector]
-    public int nextoptid = 0;
+    public int nextoptid = 3;
 
     Option option0;
     Option option1;
@@ -23,14 +24,9 @@ public class ButtonChanger : MonoBehaviour
 
 
     void Awake()
-    { 
-        /*
-          for (int i = 0; i < Btn.Length; i++)
-          {
-              option[i] = Btn[i].GetComponent<Option>();                            왜 안되는지 모르겠다..
-          }
-        */
+    {
 
+   
         option0 = Btn[0].GetComponent<Option>();
         option1 = Btn[1].GetComponent<Option>();
         option2 = Btn[2].GetComponent<Option>();
@@ -42,6 +38,22 @@ public class ButtonChanger : MonoBehaviour
         for (int i = 0; i < textEx.Length; i++)
         {
             textEx[i].text = data[i].optionEx;
+        }
+
+    }
+
+    private void FixedUpdate()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (textEx[i].text == "")
+            {
+                Btn[i].gameObject.SetActive(false);
+            }
+            else
+            {
+                Btn[i].gameObject.SetActive(true);
+            }
         }
 
     }
@@ -74,14 +86,17 @@ public class ButtonChanger : MonoBehaviour
     public void btn1click()
     {
         nextoptid = option0.data.nextimageId;
+        StoryManager.GetComponent<StoryManager>().next = option0.data.nextScenario;
     }
     public void btn2click()
     {
         nextoptid = option1.data.nextimageId;
+        StoryManager.GetComponent<StoryManager>().next = option1.data.nextScenario;
     }
     public void btn3click()
     {
         nextoptid = option2.data.nextimageId;
+        StoryManager.GetComponent<StoryManager>().next = option2.data.nextScenario;
     }
     public void btn4click()
     {

@@ -11,6 +11,7 @@ public class OptionData : ScriptableObject
     public string optionName;
     public int optionId;
     public int nextimageId;
+    public int nextScenario;
     [TextArea]
     public string optionEx;
     public int nextOptionId;

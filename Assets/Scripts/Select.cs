@@ -17,7 +17,7 @@ public class Select : MonoBehaviour
         options = GetComponentsInChildren<Option>();
         btnChanger = GameObject.Find("ButtonChanger");
 
-        RanSelect();
+      //  RanSelect();
 
     } 
 
@@ -59,7 +59,7 @@ public class Select : MonoBehaviour
     {
         if (btnChanger.GetComponent<ButtonChanger>().btnClick == true)
         {
-            RanSelect();
+          //  RanSelect();
             btnChanger.GetComponent<ButtonChanger>().btnClick = false;
         }
     }

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6606143c8185a5c44b9c84065daddb3c, type: 3}
   m_Name: Option 12
   m_EditorClassIdentifier: 
-  optionName: "\uC120\uD0DD\uC9C0 4"
+  optionName: "\uC120\uD0DD\uC9C0 2"
   optionId: 12
-  optionEx: 8
-  nextOptionId: 16
+  nextimageId: 3
+  nextScenario: 12
+  optionEx: 
+  nextOptionId: 15

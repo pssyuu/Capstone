@@ -15,5 +15,7 @@ MonoBehaviour:
   optionName: "\uC120\uD0DD\uC9C0 2"
   optionId: 6
   nextimageId: 2
-  optionEx: "\uC654\uB358\uAE38\uB85C \uB3CC\uC544\uAC04\uB2E4"
+  nextScenario: 11
+  optionEx: "\uC801\uB2F9\uD55C \uB4F1\uAE09\uC758 \uB9C8\uBC95 \uC544\uC774\uD15C\uC744
+    \uC81C\uACF5\uD55C\uB2E4."
   nextOptionId: 11
